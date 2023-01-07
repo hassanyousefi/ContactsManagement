@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title class="modal-title"> جزییات مخاطب </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-item class="input-container">
+        <ion-label><b>نام:</b> {{contact.FirstName}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>نام خانوادگی:</b> {{contact.LastName}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>شماره تلفن:</b> {{contact.PhoneNumber}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>آدرس:</b> {{contact.Address}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>ایمیل:</b> {{contact.Email}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>یادداشت:</b> {{contact.Note}}</ion-label>
+    </ion-item>
+    <ion-item class="input-container">
+        <ion-label><b>شرکت:</b> {{contact.Company}}</ion-label>
+    </ion-item>
+</ion-content>
+<div class="button-container">
+    <ion-button class="back-button" size="large" (click)="backButton()">بازگشت</ion-button>
+</div>

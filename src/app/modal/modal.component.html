@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title *ngIf="!isEditMode" class="modal-title"> {{ modalType == 'job' ? 'افزودن شغل' : 'افزودن مخاطب' }} </ion-title>
+        <ion-title *ngIf="isEditMode" class="modal-title"> {{ modalType == 'job' ? 'ویرایش شغل' : 'ویرایش مخاطب' }} </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" *ngIf="modalType == 'job'">
+    <ion-item class="input-container">
+        <ion-input class="input" type="text" placeholder="نام شغل" [(ngModel)]="jobName"></ion-input>
+    </ion-item>
+</ion-content>
+<ion-content class="ion-padding" *ngIf="modalType == 'contact'">
+    <form [formGroup]="contactForm" id="form1">
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="*نام" formControlName="FirstName"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="نام خانوادگی" formControlName="LastName"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="*شماره تلفن" formControlName="PhoneNumber"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="آدرس" formControlName="Address"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="ایمیل" formControlName="Email"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="یادداشت" formControlName="Note"></ion-input>
+        </ion-item>
+        <ion-item class="input-container">
+            <ion-input class="input" type="text" placeholder="شرکت" formControlName="Company"></ion-input>
+        </ion-item>
+    </form>
+</ion-content>
+<div class="button-container">
+    <ion-button class="cancel-button" size="large" color="danger" (click)="cancel()">انصراف</ion-button>
+    <ion-button class="add-button" size="large" (click)="confirm()">{{isEditMode ? 'ویرایش' : 'افزودن'}}</ion-button>
+</div>
+
+
+
+
+
+
+
+

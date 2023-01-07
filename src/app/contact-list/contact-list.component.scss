@@ -1,0 +1,94 @@
+.centeralize-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  ion-title {
+    text-align: right;
+  }
+  
+  ion-label {
+    font-family: 'Segoe UI';
+  }
+}
+
+
+.ion-page {
+  .page-title {
+    text-align: right;
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  ::ng-deep ion-searchbar {
+    .searchbar-input {
+      text-align: right;
+      box-shadow: none;
+      font-size: 14px;
+    }
+
+    .searchbar-search-icon {
+      right: 16px;
+      left: unset;
+    }
+
+    .searchbar-clear-button {
+      left: 13px;
+      right: unset;
+    }
+  }
+
+  .number {
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  ion-label {
+    font-family: 'Segoe UI';
+    margin-left: 10px
+  }
+
+  .not-found {
+    @extend .centeralize-content;
+    height: 80%;
+  }
+}
+
+::ng-deep ion-action-sheet {
+  .action-sheet-title {
+    text-align: right !important;
+  }
+
+  .action-sheet-group-cancel  {
+    padding-bottom: 20px !important;
+  }
+
+  .action-sheet-button-inner {
+    flex-flow: row-reverse !important;
+
+    .action-sheet-icon {
+      margin: unset;
+      margin-left: 10px;
+      padding: unset;
+    }
+  }
+}
+
+.add-button {
+  position: absolute;
+  bottom: 25px;
+  right: 20px
+}
+
+.back-button {
+  margin-right: 0 !important;
+}
+
+.p-10 {
+  padding: 10px;
+}
